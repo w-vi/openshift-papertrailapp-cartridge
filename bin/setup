@@ -1,6 +1,4 @@
 #!/bin/bash -eu
 
-export PATH=/opt/rh/ruby193/root/bin:$PATH
-export LD_LIBRARY_PATH=/opt/rh/ruby193/root/usr/lib64
 mkdir $OPENSHIFT_PAPERTRAILAPP_DIR/logs
-cd $OPENSHIFT_PAPERTRAILAPP_DIR && bundle install
+cd $OPENSHIFT_PAPERTRAILAPP_DIR  && curl -sLO https://github.com$(curl -Ls https://github.com/papertrail/remote_syslog2/releases/latest | egrep -o '/papertrail/remote_syslog2/releases/download/v[0-9]+\.[0-9]*/remote_syslog_linux_amd64.tar.gz') && tar -xzf ./remote_syslog_linux_amd64.tar.gz remote_syslog/remote_syslog --strip-components=1 && chmod +x ./remote_syslog
