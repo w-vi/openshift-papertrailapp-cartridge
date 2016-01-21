@@ -1,5 +1,7 @@
-openshift-papertrailapp-cartridge
-=================================
+openshift-papertrailapp-cartridge 2
+===================================
+*(it uses remote_syslog2 from papertrail)*
+
 
 ####This only works on non-scaled gears at the moment
 
