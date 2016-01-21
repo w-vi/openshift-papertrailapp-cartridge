@@ -17,7 +17,7 @@ your application
 
 Then install this cartridge
 
-    rhc cartridge-add https://raw.github.com/openshift-cartridges/openshift-papertrailapp-cartridge/master/metadata/manifest.yml -a <appname>
+    rhc cartridge-add https://raw.github.com/w-vi/openshift-papertrailapp-cartridge/master/metadata/manifest.yml -a <appname>
 
 This cartridge will monitor the files in all log directories that are published as environment variables, and exist.
 You can ssh into your gear and run the following command to see what directories will be monitored
